@@ -1,13 +1,10 @@
 with open('data.json') as file:
-    lst = file.readlines()
-    f_lst = list()
+    lst = file.readlines()  # We move the json file to the list view
+    f_lst = list()  # the values ​​in this list are aggregated
 
     for x in range(1, len(lst)-1):
-        # f_lst.append(lst[x].strip().split(':'))
-        # print(lst[x].strip().split(':'))
         d = lst[x].strip().split(':')
         value = d[1][1:len(d[1])-2]
-        # for y in range(len(d)):
         if len(d[1]) > 1:
             if '$' not in value:
                 f_lst.append(value)
