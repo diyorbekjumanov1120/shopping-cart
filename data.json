@@ -1,5 +1,5 @@
 {
-    'itemName':'Shirt',
-    'itemPrice':'$25',
-    'quantity':1
+    "itemName":"Shirt",
+    "itemPrice":"$25",
+    "quantity":1
 }
