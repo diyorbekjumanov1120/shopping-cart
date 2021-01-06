@@ -1,0 +1,12 @@
+[
+    {
+        "itemName": "apple",
+        "itemPrice": "$3",
+        "quantity": 2
+    },
+    {
+        "itemName": "banana",
+        "itemPrice": "$3.5",
+        "quantity": 3
+    }
+]
