@@ -18,3 +18,8 @@ for half_data in lst:
     quantity = float(half_data[idx1:idx2])
 
     total += itemPrice * quantity
+
+dic = {
+    "shipping": 0,
+    "total": total
+}
