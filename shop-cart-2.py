@@ -13,7 +13,7 @@ for half_data in lst:
     idx2 = half_data.find('"', idx1)
     itemPrice = float(half_data[idx1:idx2])
 
-    idx1 = half_data.find('quantity') + 11
+    idx1 = half_data.find('quantity') + 10
     idx2 = half_data.find('}', idx1)
     quantity = float(half_data[idx1:idx2])
 
