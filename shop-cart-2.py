@@ -23,3 +23,8 @@ dic = {
     "shipping": 0,
     "total": total
 }
+file.close()
+
+f = open('data-2.json', 'w')
+j = json.dumps(dic, indent=4)
+f.write(j)
