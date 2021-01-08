@@ -1,4 +1,18 @@
 import json
+
+
+def itemPrice(half_data):
+    idx1 = half_data.find('$') + 1
+    idx2 = half_data.find('"', idx1)
+    return float(half_data[idx1:idx2])
+
+
+def quantity(half_data):
+    idx1 = half_data.find('quantity') + 11
+    idx2 = half_data.find('}', idx1)
+    return float(half_data[idx1:idx2])
+
+
 file = open('data-1.json')
 data = file.read()
 
@@ -9,15 +23,7 @@ lst.append(data[data.find('}') + 1:])
 total = 0
 
 for half_data in lst:
-    idx1 = half_data.find('$') + 1
-    idx2 = half_data.find('"', idx1)
-    itemPrice = float(half_data[idx1:idx2])
-
-    idx1 = half_data.find('quantity') + 10
-    idx2 = half_data.find('}', idx1)
-    quantity = float(half_data[idx1:idx2])
-
-    total += itemPrice * quantity
+    total += itemPrice(half_data) * quantity(half_data)
 
 dic = {
     "shipping": 0,
